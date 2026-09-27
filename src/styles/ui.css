@@ -1,0 +1,190 @@
+/* ============================================================
+   ui.css — LES BRIQUES RÉUTILISABLES
+   Cartes, boutons, champs de formulaire, alertes, titres de section…
+   Tout ce qui sert dans PLUSIEURS composants.
+
+   Pourquoi un fichier commun plutôt que de la duplication ?
+   Parce que .field, .btn ou .card sont utilisés par 4 composants :
+   les redéfinir dans chacun ferait diverger le style au premier
+   changement. Ici, une seule source de vérité.
+
+   Contenu : .card, .card-head, .fields, .field, .hint, .alert,
+             .form-actions, .btn (+ variantes primary/ghost/small)
+   ============================================================ */
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 26px 28px;
+}
+
+.card-head h2 {
+  margin: 0 0 4px;
+  font-size: 19px;
+  color: var(--navy);
+}
+
+.card-head p {
+  margin: 0 0 18px;
+  font-size: 13.5px;
+  color: var(--muted);
+}
+
+.fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 16px;
+}
+
+.fields .field.full {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 560px) {
+  .fields {
+    grid-template-columns: 1fr;
+  }
+}
+
+.field label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 5px;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 14px;
+  background: #fbfcfe;
+  color: var(--text);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.field input:focus,
+.field select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.14);
+  background: #fff;
+}
+
+.hint {
+  display: block;
+  margin-top: 5px;
+  font-size: 11.5px;
+  color: var(--muted);
+}
+
+.alert {
+  margin-top: 16px;
+  padding: 11px 14px;
+  border-radius: 8px;
+  font-size: 13.5px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #991b1b;
+}
+
+.alert.ok {
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+  color: #166534;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.form-actions.center {
+  justify-content: center;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  padding: 11px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn.primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn.primary:hover:not(:disabled) {
+  background: var(--accent-dark);
+}
+
+.btn.ghost {
+  background: var(--card);
+  border-color: var(--border);
+  color: var(--text);
+}
+
+.btn.ghost:hover:not(:disabled) {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.btn.small {
+  padding: 6px 10px;
+  font-size: 12.5px;
+  border-radius: 7px;
+  background: #f1f5f9;
+  border-color: var(--border);
+  color: var(--text);
+}
+
+.btn.small:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: #fff;
+}
+
+.btn.small.danger:hover {
+  border-color: var(--danger);
+  color: var(--danger);
+  background: #fff;
+}
+
+.main {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 28px 24px 48px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.65fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+@media (max-width: 960px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
