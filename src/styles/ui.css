@@ -1,16 +1,3 @@
-/* ============================================================
-   ui.css — LES BRIQUES RÉUTILISABLES
-   Cartes, boutons, champs de formulaire, alertes, titres de section…
-   Tout ce qui sert dans PLUSIEURS composants.
-
-   Pourquoi un fichier commun plutôt que de la duplication ?
-   Parce que .field, .btn ou .card sont utilisés par 4 composants :
-   les redéfinir dans chacun ferait diverger le style au premier
-   changement. Ici, une seule source de vérité.
-
-   Contenu : .card, .card-head, .fields, .field, .hint, .alert,
-             .form-actions, .btn (+ variantes primary/ghost/small)
-   ============================================================ */
 
 .card {
   background: var(--card);

@@ -1,11 +1,3 @@
-/* ============================================================
-   base.css — LES FONDATIONS
-   Variables de couleurs, remise à zéro, typographie de base et
-   quelques classes utilitaires.
-
-   ⚠️ Importé EN PREMIER (voir src/main.jsx) : ces règles doivent
-      rester en tête de la cascade CSS.
-   ============================================================ */
 
 :root {
   --navy: #1e3a6e;
