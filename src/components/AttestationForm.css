@@ -1,0 +1,13 @@
+.group-title {
+  font-size: 12.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--accent);
+  margin: 22px 0 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
+}
+
+.group-title:first-of-type {
+  margin-top: 4px;
+}
