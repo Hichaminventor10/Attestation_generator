@@ -8,7 +8,7 @@ const EMPTY = {
     nom: '',
     prenom: '',
     dateNaissance: '',
-    region: '',
+     lieuNaissance: '',
     cin: '',
     adresse: '',
     fonction: '',
@@ -18,8 +18,6 @@ const EMPTY = {
     dateSortie: ''
 
 };
-
-
 
 
 
@@ -76,48 +74,22 @@ return(<>
                     <option>Madame (Mme)</option>
                 </select>
             </div>
-            <div>
-                <label>Nom *</label>
-                <input type="text" id="nom" value={form.nom} onChange={set('nom')} placeholder='Saisir votre Nom' required/>
-            </div>
-            <div>
-                <label>Prenom *</label>
-                <input type="text" id="prenom" value={form.prenom} onChange={set('prenom')} placeholder='Saisir votre Prenom' required/>
-            </div>
-            <div>
-                <label>Date de Naissance </label>
-                <input type="date" id="dateNaissance" value={form.dateNaissance} onChange={set('dateNaissance')} />
-            </div>
-            <div>
-                <label htmlFor='region'>Région</label>
-                <select id='region' value={form.region} onChange={set('region')}>
-                          <option value="">-- Choisir une région --</option>
-
-        <option value="1">Tanger-Tétouan-Al Hoceïma</option>
-
-        <option value="2">L'Oriental</option>
-
-        <option value="3">Fès-Meknès</option>
-
-        <option value="4">Rabat-Salé-Kénitra</option>
-
-        <option value="5">Béni Mellal-Khénifra</option>
-
-        <option value="6">Casablanca-Settat</option>
-
-        <option value="7">Marrakech-Safi</option>
-
-        <option value="8">Drâa-Tafilalet</option>
-
-        <option value="9">Souss-Massa</option>
-
-        <option value="10">Guelmim-Oued Noun</option>
-
-        <option value="11">Laâyoune-Sakia El Hamra</option>
-
-        <option value="12">Dakhla-Oued Ed-Dahab</option>
-                </select>
-            </div>
+            <div className="field half">
+            <label htmlFor="nom">Nom *</label>
+            <input id="nom" value={form.nom} onChange={set('nom')} placeholder="Ex : BENALI" required />
+          </div>
+            <div className="field half">
+            <label htmlFor="prenom">Prénom *</label>
+            <input id="prenom" value={form.prenom} onChange={set('prenom')} placeholder="Ex : Youssef" required />
+          </div>
+            <div className="field half">
+            <label htmlFor="dateNaissance">Date de naissance</label>
+            <input id="dateNaissance" type="date" value={form.dateNaissance} onChange={set('dateNaissance')} />
+          </div>
+        <div className="field half">
+            <label htmlFor="lieuNaissance">Lieu de naissance</label>
+            <input id="lieuNaissance" value={form.lieuNaissance} onChange={set('lieuNaissance')} placeholder="Ex : Tanger" />
+          </div>
              <div className="field half">
             <label htmlFor="cin">CIN</label>
             <input id="cin" value={form.cin} onChange={set('cin')}  placeholder="Ex : AB123456" />
