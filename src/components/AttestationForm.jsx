@@ -131,8 +131,30 @@ return(<>
             <label htmlFor="matricule">Matricule</label>
             <input id="matricule"  placeholder="Ex : 00123" />
             </div>
+         </div>
+         {/*conditional rendering*/}
+         {error && <div className='alert'>{error}</div>}
 
+         <div className='form-actions'>
+            <button type='submit' className='btn primary' disabled={busy}>
 
+                {busy ? 'Generation...' : "Générer l’attestation" }
+
+            </button>
+
+            <button
+            type='button'
+            className='btn ghost'
+            disabled={busy}
+            onClick={() => {
+                setForm(EMPTY)
+                setError('')
+            }
+            }>
+                
+                Effacer
+
+            </button>
          </div>
     </form>
 
