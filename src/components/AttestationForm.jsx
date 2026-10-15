@@ -1,6 +1,8 @@
 
 import {useState} from 'react'
 import './AttestationForm.css';
+import { createAttestation } from '../lib/db.js';
+
 
 
 const EMPTY = {
@@ -8,7 +10,7 @@ const EMPTY = {
     nom: '',
     prenom: '',
     dateNaissance: '',
-     lieuNaissance: '',
+    lieuNaissance: '',
     cin: '',
     adresse: '',
     fonction: '',
@@ -18,9 +20,6 @@ const EMPTY = {
     dateSortie: ''
 
 };
-
-
-
 
 function AttestationForm({ company, onGenerated }) {
 
@@ -54,7 +53,7 @@ function AttestationForm({ company, onGenerated }) {
     }
 };
 
-return(<>
+return(
 
 <section className="card">
     <div className='card-head'>
@@ -68,19 +67,19 @@ return(<>
             {/* civilité */}
 
             <div className='field half'>
-                <label>Civilité *</label>
-                <select>
-                    <option>Monsieur (M.)</option>
-                    <option>Madame (Mme)</option>
+                <label htmlFor='civilite'>Civilité *</label>
+                <select id='civilite' value={form.civilite} onChange={set('civilite')}>
+                    <option value="M.">Monsieur (M.)</option>
+                    <option value="Mme">Madame (Mme)</option>
                 </select>
             </div>
             <div className="field half">
             <label htmlFor="nom">Nom *</label>
-            <input id="nom" value={form.nom} onChange={set('nom')} placeholder="Ex : BENALI" required />
+            <input id="nom" value={form.nom} onChange={set('nom')} placeholder="Ex : KABER" required />
           </div>
             <div className="field half">
             <label htmlFor="prenom">Prénom *</label>
-            <input id="prenom" value={form.prenom} onChange={set('prenom')} placeholder="Ex : Youssef" required />
+            <input id="prenom" value={form.prenom} onChange={set('prenom')} placeholder="Ex : HICHAM" required />
           </div>
             <div className="field half">
             <label htmlFor="dateNaissance">Date de naissance</label>
@@ -96,7 +95,7 @@ return(<>
           </div>
           <div className="field full">
             <label htmlFor="adresse">Adresse</label>
-            <input id="adresse" value={form.adresse} onChange={set('adresse')}  placeholder="Ex : 10, Avenue Hay Essalam, Rabat" />
+            <input id="adresse" value={form.adresse} onChange={set('adresse')}  placeholder="Ex : 10, Avenue Hay Essalam, Tanger" />
           </div>
 
         </div>
@@ -129,7 +128,7 @@ return(<>
 
             <div className="field half">
             <label htmlFor="matricule">Matricule</label>
-            <input id="matricule"  placeholder="Ex : 00123" />
+            <input id="matricule" value={form.matricule} onChange={set('matricule')} placeholder="Ex : 00123" />
             </div>
          </div>
          {/*conditional rendering*/}
@@ -157,19 +156,8 @@ return(<>
             </button>
          </div>
     </form>
-
-
-
 </section>
-
-
-
-</>
-
-
-)
-
-
+          );
 }
 
 export default AttestationForm ;
