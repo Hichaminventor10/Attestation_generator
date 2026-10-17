@@ -3,8 +3,9 @@ import AttestationForm from './components/AttestationForm';
 import CompanySettings from './components/CompanySettings';
 import ResultView from './components/ResultView';
 import { DEFAULT_COMPANY } from './lib/defaultCompany';
-import History from './components/History';
+import History from './components/History.jsx';
 import { config, getCompany, saveCompany, supabase } from './lib/db';
+
 
 import './App.css'; 
 
