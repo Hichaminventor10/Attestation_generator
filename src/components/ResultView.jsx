@@ -6,8 +6,8 @@ import './ResultView.css' ;
 
 function ResultView({ record,onNew, onHistory}) {
 
-     const [doc, setDoc] = useState(null);
-  const [url, setUrl] = useState('');
+    const [doc, setDoc] = useState(null);
+    const [url, setUrl] = useState('');
 
 
  useEffect(() => {
@@ -58,7 +58,7 @@ return (
                     </button>
 
 
-                    <button className='btn ghost' onClick={print} disabled={!url}>
+                    <button className='btn ghost imp' onClick={print} disabled={!url}>
                             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <polyline points="6 9 6 2 18 2 18 9" />
                 <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
@@ -100,7 +100,7 @@ return (
                      Nouvelle attestation
                 </button>
                 
-                <button className='btn ghost' >
+                <button className='btn ghost his' onClick={onHistory}>
 
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-clipboard2-plus" viewBox="0 0 16 16">
   <path d="M9.5 0a.5.5 0 0 1 .5.5.5.5 0 0 0 .5.5.5.5 0 0 1 .5.5V2a.5.5 0 0 1-.5.5h-5A.5.5 0 0 1 5 2v-.5a.5.5 0 0 1 .5-.5.5.5 0 0 0 .5-.5.5.5 0 0 1 .5-.5z"/>
