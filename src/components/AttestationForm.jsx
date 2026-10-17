@@ -137,7 +137,7 @@ return(
          <div className='form-actions'>
             <button type='submit' className='btn primary' disabled={busy}>
 
-                {busy ? 'Generation...' : "Générer l’attestation" }
+                {busy ? 'Génération...' : "Générer l’attestation" }
 
             </button>
 
