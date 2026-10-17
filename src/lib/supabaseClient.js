@@ -17,5 +17,4 @@ export const supabase = isSupabaseConfigured
     })
   : null;
 
-export const supabaseUrl =
-  isSupabaseConfigured ? url : null;
+export const supabaseUrl = isSupabaseConfigured ? url : null;
