@@ -1,0 +1,112 @@
+
+.result-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.result-head-text {
+  flex: 1;
+  min-width: 200px;
+}
+
+.result-head-text h2 {
+  margin: 0 0 3px;
+  font-size: 18px;
+  color: var(--navy);
+}
+
+.result-head-text p {
+  margin: 0;
+  font-size: 13.5px;
+  color: var(--muted);
+}
+
+.result-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* ---------- La pastille verte de succès ---------- */
+.success-badge {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #dcfce7;
+  color: var(--ok);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ---------- L'APERÇU DU PDF (le cœur de l'écran) ----------
+   Le cadre gris autour de l'iframe : .pdf-frame-wrap
+   L'iframe elle-même (c'est ELLE qui affiche le document) : .pdf-frame
+   Sans hauteur explicite, une iframe fait 150px par défaut :
+   d'où le height: 640px, à ajuster selon ton goût.                    */
+.pdf-frame-wrap {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #e2e8f0;
+}
+
+.pdf-frame {
+  display: block;
+  width: 100%;
+  height: 640px;
+  border: none;
+}
+
+/* ---------- Récapitulatif en cases ---------- */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.info {
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.info span {
+  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--muted);
+}
+
+.info strong {
+  font-size: 13.5px;
+  color: var(--text);
+}
+
+/* ---------- Aperçu plus compact sur petit écran ---------- */
+@media (max-width: 700px) {
+  .pdf-frame {
+    height: 440px;
+  }
+}
+
+
+.btn.ghost.his:hover {
+    background-color: #0ae849;
+    color: #ffffff;
+    border-color: #2563eb;
+}
+.btn.ghost.imp:hover {
+    background-color: #4d8f60;
+    color: #ffffff;
+    border-color: #2563eb;
+}
