@@ -1,10 +1,29 @@
-# AttestPro — Générateur d'attestations de travail
+<p align="center">
+  <img src="docs/logo.png" width="220" alt="AttestPro logo">
+</p>
 
-Application web complète en **React** qui génère un **PDF d'attestation de travail** pour un salarié après saisie de ses données (nom, prénom, dates, CIN, fonction…), avec :
 
-- **Aperçu du PDF** directement dans la page
-- **Bouton de téléchargement** du PDF
-- **Bouton d'impression**
-- **Historique** de toutes les attestations générées (ré-téléchargement, suppression)
-- **Numérotation automatique** des attestations (`AT-2026-0001`, `AT-2026-0002`, …)
-- **Réglages de l'entreprise** (nom, adresse, RC, ICE, IF…) qui apparaissent en en-tête du document
+<h1 align="center"> AttestPro</h1>
+
+<p align="center">
+  Work Certificate Generator
+</p>
+
+
+
+
+AttestPro — Work Certificate Generator
+
+A complete React web application that generates employment certificates in PDF format for employees based on their personal and professional information (first name, last name, dates, national ID, job title, etc.).
+
+Features
+
+* PDF Preview directly within the application.
+* PDF Download to save generated certificates.
+* Print Functionality to print certificates directly.
+* Certificate History to view all generated certificates, download them again, or delete them.
+* Automatic Numbering for certificates (AT-2026-0001, AT-2026-0002, etc.).
+* Company Settings to customize company information, including name, address, Commercial Register (RC), Tax Identification Number (IF), and ICE.
+
+
+
