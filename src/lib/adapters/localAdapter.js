@@ -42,6 +42,11 @@ function createStore() {
 const store = createStore();
 export const localStoreKind = store.kind;
 
+function makeId() {
+  if (typeof crypto !== 'undefined' && crypto.randomUUID) return crypto.randomUUID();
+  return `id-${Date.now()}-${Math.random().toString(16).slice(2, 10)}`;
+}
+
 function nextNumero(existing, dateGeneration) {
   const year = new Date(dateGeneration).getFullYear();
   const prefix = `AT-${year}-`;
