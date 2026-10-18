@@ -1,0 +1,10 @@
+.card.side {
+  position: sticky;
+  top: 96px;
+}
+
+@media (max-width: 960px) {
+  .card.side {
+    position: static;
+  }
+}
