@@ -67,7 +67,7 @@
   display: block;
   margin-top: 5px;
   font-size: 11.5px;
-  color: var(--danger);
+  color: var(--muted);
 }
 
 .alert {
