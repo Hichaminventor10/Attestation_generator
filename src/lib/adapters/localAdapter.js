@@ -64,7 +64,7 @@ export const localAdapter ={
     mode : "local",
     storageKind : store.kind,
 
-    async listeAttestations(){
+    async listAttestations(){
         const items = store.read(KEY_ATT, []);
 
         return [...items].sort((a,b) => {
