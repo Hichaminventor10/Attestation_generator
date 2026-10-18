@@ -30,7 +30,7 @@
   flex-wrap: wrap;
 }
 
-/* ---------- La pastille verte de succès ---------- */
+
 .success-badge {
   width: 40px;
   height: 40px;
@@ -43,11 +43,7 @@
   flex-shrink: 0;
 }
 
-/* ---------- L'APERÇU DU PDF (le cœur de l'écran) ----------
-   Le cadre gris autour de l'iframe : .pdf-frame-wrap
-   L'iframe elle-même (c'est ELLE qui affiche le document) : .pdf-frame
-   Sans hauteur explicite, une iframe fait 150px par défaut :
-   d'où le height: 640px, à ajuster selon ton goût.                    */
+
 .pdf-frame-wrap {
   border: 1px solid var(--border);
   border-radius: 10px;
@@ -62,7 +58,7 @@
   border: none;
 }
 
-/* ---------- Récapitulatif en cases ---------- */
+
 .info-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -92,7 +88,7 @@
   color: var(--text);
 }
 
-/* ---------- Aperçu plus compact sur petit écran ---------- */
+/*  Aperçu plus compact */
 @media (max-width: 700px) {
   .pdf-frame {
     height: 440px;
