@@ -25,5 +25,7 @@ Features
 * Automatic Numbering for certificates (AT-2026-0001, AT-2026-0002, etc.).
 * Company Settings to customize company information, including name, address, Commercial Register (RC), Tax Identification Number (IF), and ICE.
 
-
+<p align="center">
+  <img src="docs/preview.png" width="720" alt="AttestPro preview">
+</p>
 
